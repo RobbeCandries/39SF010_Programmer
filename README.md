@@ -1,9 +1,11 @@
-#  39SFXXX and 29C011 Programmer
-##### SST39SF010A/020A/040 and W29F011 Arduino Mega Programmer
+# 39SF010 Programmer
+
+#### SST39SF010A Arduino Mega Programmer
+
 Based on the code of 39SF040 / 39SF020A Programmer by Bob Szymanski Published 9/24/2015.
 
 Connect Flash to Arduino mega according to the pins as defined in the source file. SD card pinout is as provided by Arduino, on pins 51-53.
- 
+
 Based on Arduino Mega 2650 and Standard SD Shield. Serial terminal speed 57600.
 
 Quick serial commands list:
@@ -20,11 +22,11 @@ Quick serial commands list:
 
 **EC**                  - Erase Chip
 
-**ETF arg1 arg2 arg3**	- Writes EEPROM data to File; arg1 - filename, arg2 - start address, arg3 - data length
+**ETF arg1 arg2 arg3**  - Writes EEPROM data to File; arg1 - filename, arg2 - start address, arg3 - data length
 
 **FTE arg1 arg2**        - Program ROM File data to EEPROM; arg1 - filename, arg2 - start destination address
 
-Example Usage: 
+Example Usage:
 
 FTE FIRMWARE.ROM 0x10000          - Writes file FIRMWARE.ROM to EEPROM starting from 0x10000
 
@@ -32,8 +34,8 @@ ETF FIRMWARE.ROM 0x10000 0x8000   - Writes EEPROM data starting from 0x10000 and
 
 *(ETF stands for Eeprom To File, FTE - File To Eeprom, etc.)*
 
-![Example workflow](https://github.com/doctorandrey/39SF040_Programmer/blob/6d708868ea0c198c6b744fc6fe6072bf5909737e/EEPROM_Prg.png)
+![Example workflow](https://github.com/RobbeCandries/39SF010_Programmer/blob/04c77cbdbcae6427b616182e6be6ef26fa4567fd/EEPROM_Prg.png)
 
-Dependencies: https://github.com/ppedro74/Arduino-SerialCommands @ppedro74
+Dependencies: <https://github.com/ppedro74/Arduino-SerialCommands> @ppedro74
 
 P.S. It is useful for programming EPROM of ZX-Spectrum :)
